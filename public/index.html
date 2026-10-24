@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0c14" />
+  <meta name="description" content="Pravi AI — your personal AI assistant." />
+  <title>Pravi AI — Your AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P<span>✦</span></div>
+        <div class="brand-name">pravi<span>ai</span><small>PERSONAL AI ASSISTANT</small></div>
+      </div>
+      <button class="new-chat" id="newChatBtn"><span>＋</span> New chat</button>
+      <div class="side-label">YOUR SPACE</div>
+      <div class="history-list" id="historyList">
+        <div class="empty-history">Your recent chats will appear here.</div>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="status-dot"></div>
+        <div><strong>Pravi AI</strong><small>Powered by Gemini</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="topbar-title"><span class="live-dot"></span> AI Assistant <span class="model-pill">GEMINI</span></div>
+        <button class="icon-button" id="clearBtn" title="Start a fresh chat" aria-label="Clear chat">↻</button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="orb-wrap"><div class="orb"><span>✦</span></div></div>
+          <div class="eyebrow">YOUR IDEAS. YOUR INTELLIGENCE.</div>
+          <h1>Hey there,<br /><span>what's on your mind?</span></h1>
+          <p>I'm Pravi AI. Ask me anything, explore an idea,<br class="desktop-break" /> or let's solve something together.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain artificial intelligence in simple Hinglish."><span>✧</span><strong>Learn something</strong><small>Explain AI in simple words</small></button>
+            <button class="suggestion" data-prompt="Give me 5 creative project ideas for my portfolio."><span>⌘</span><strong>Build a project</strong><small>Ideas for my portfolio</small></button>
+            <button class="suggestion" data-prompt="Help me make a realistic study plan for this week."><span>◷</span><strong>Plan my week</strong><small>Make a simple study plan</small></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" maxlength="12000" placeholder="Message Pravi AI..." aria-label="Message Pravi AI"></textarea>
+          <button class="send-button" id="sendBtn" type="submit" aria-label="Send message"><span>↑</span></button>
+        </form>
+        <div class="composer-note"><span>✦</span> Pravi AI can make mistakes. Verify important information.</div>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/script.js" defer></script>
+</body>
+</html>
